@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  background: #fff;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* font-family: Arial, sans-serif; */
+}
+
+/* header section starts */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 80px;
+  /* padding: 15px 40px; */
+  background: #222;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 1.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+#navbar li:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+  color: goldenrod;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+#navbar li:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+  color: goldenrod;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #fff;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+  transition: 0.3s ease;
+}
+
+/* home section stars */
+
+#home .bg {
+  display: flex;
+  background-image: url("../images/bgfinal2.png");
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  padding: 0 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#home .bg .slogan h2 {
+  font-family: "Playfair Display", serif;
+  transition: font-size 0.3s ease;
+  font-size: 70px;
+  font-weight: 700;
+  color: #000000;
+  text-shadow: 3px 3px 6px rgba(10, 10, 10, 10.5); /* Modified text-shadow */
+  cursor: pointer;
+  transition: font-size 0.5s ease;
+}
+
+#home .bg .slogan h2:hover {
+  font-size: 75px; /* Increase font size on hover */
+  color: goldenrod;
+}
+
+#home .bg .slogan p {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+}
+
+#home .bg .bgimg img {
+  max-width: 700px;
+  height: auto;
+  animation: float 3s linear infinite;
+}
+
+#home .bg .slogan .a1 {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: #000000;
+  text-shadow: 3px 3px 6px rgba(10, 10, 10, 10.5);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-3rem);
+  }
+
+  50% {
+    transform: translateY(0rem);
+  }
+}
+
+/* gallery section starts  */
+
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.card:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.card > .card-inner {
+  padding: 10px;
+}
+.card .header h2,
+h3 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.card .header {
+  margin-bottom: 5px;
+}
+.card img {
+  width: 100%;
+  transition: 0.4s ease-in-out;
+}
+
+.card img:hover {
+  scale: 1.1;
+}
+
+/* gallery section ends  */
+
+/* Product section starts  */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 110px;
+}
+
+.container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 1);
+}
+
+.product h2 {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.product .content .container {
+  padding: 30px 35px;
+  border-style: none;
+}
+
+.product .content .container img {
+  width: 30%;
+  border-radius: 5px;
+}
+
+.product .content .container .image1 {
+  float: right;
+}
+
+.product .content .container .image2 {
+  float: left;
+}
+
+.product .content .container h3 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.product .content .container p {
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+/* contact section starts  */
+
+.contact {
+  min-height: 100vh;
+  padding: 50px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 60px;
+  padding: 0px 40px 40px 40px;
+}
+
+.contact .container {
+  width: 1000px;
+  margin: 80px auto;
+  /* padding: 10px 110px; */
+  border-style: none;
+}
+
+.contact .container .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.contact .wrapper .contact-info {
+  text-align: left;
+  padding: 30px 35px;
+}
+
+.contact .wrapper .contact-info h3 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contact .wrapper .contact-info p {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.contact .wrapper .contact-info button {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition-duration: 0.5s;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+.contact .wrapper .contact-info button:hover {
+  background-color: #fff;
+  color: #222;
+}
+
+.contact .wrapper .contact-info2 {
+  text-align: left;
+  padding: 30px 35px;
+}
+
+.contact .wrapper .contact-info2 h3 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contact .wrapper .contact-info2 p {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  /* padding: ; */
+}
+
+.contact .wrapper .contact-info2 i {
+  padding: 0px 20px;
+}
+
+/* location section starts  */
+
+.location h2 {
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  text-align: center;
+  padding: 0px 30px 0px 30px;
+}
+
+.location .map {
+  padding-top: 50px;
+  margin-left: 30vw;
+  width: 0em;
+  align-items: center;
+}
+
+.location .map .mappic {
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* about us section starts */
+
+.aboutus h2 {
+  color: #fff;
+  margin-top: 80px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  text-align: center;
+  padding: 0px 30px 0px 30px;
+}
+
+.aboutus .content h3 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.aboutus .content p {
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+/* footer section starts  */
+
+.footer {
+  margin: 100px 0px 0px 0px;
+  width: 100%;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 -10px 15px rgba(0, 0, 0, 1.06);
+}
+
+.first-div {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0px;
+}
+
+.name {
+  margin: 10px 0px;
+  font-size: 19px;
+  color: #fff;
+}
+
+.first-div .f1 .name h4 {
+  color: #fff;
+  margin-top: 10px;
+}
+
+.first-div .f2 .name {
+  color: #fff;
+}
+
+li {
+  list-style: none;
+  color: #b5b2b2;
+  margin: 8px 0px;
+}
+
+.first-div .f4 .name h4 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.first-div .f4 .hours li a {
+  text-decoration: none;
+  color: #b5b2b2;
+}
+
+.first-div .f5 .hours li a {
+  text-decoration: none;
+  color: #b5b2b2;
+}
+
+.first-div .f5 .hours {
+  margin-top: 10px;
+}
+
+.sec-div {
+  margin: 40px 0px;
+}
+
+.sec-div .social {
+  margin: 20px 0px;
+}
+
+.sec-div .social ul {
+  display: flex;
+  justify-content: center;
+}
+
+.sec-div .social ul li a i {
+  font-size: 25px;
+  color: #fff;
+  margin: 0px 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.4s ease-in-out;
+}
+
+.sec-div .social ul li a i:hover {
+  color: #222;
+  background-color: #fff;
+}
+
+.sec-div .copy {
+  text-align: center;
+}
+
+.sec-div .copy p {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* footer section ends  */
